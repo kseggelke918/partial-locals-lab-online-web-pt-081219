@@ -25,9 +25,9 @@ class StudentsController < ApplicationController
     # render 'index'
     @students = Student.all 
     if params[:query]
-      @student = Student.where('name LIKE ?', "%#{params[:query]}%")
+      @students = Student.where('name LIKE ?', "%#{params[:query]}%")
     else
-      @student = Student.all 
+      @students = Student.all 
     end 
   end
 
